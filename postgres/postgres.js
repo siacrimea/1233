@@ -14,13 +14,16 @@ const client = new Client({
 client.connect();
 
 client.query(
-    `SELECT * from ssv.users where user_surname = '${user_arg}'`,
-    //["node hero"],
+    `SELECT * from ssv.users where upper(user_surname) = upper('${user_arg}')`,
+    //`SELECT * from ssv.users where upper(user_surname) = upper('СЫЛКА')`, //${user_arg}')`,
+    // ["node hero"],
     function(err, result) {
         if (err) {
             return console.error("error happened during query", err);
         }
-        let user = result.rows.find((item) => item.user_login == "__________");
+        console.log(result);
+        let user = result.rows.find((item) => item.user_login == "fzv_k447");
+        console.log(user);
         const hash = md5(user.user_id + "123").toUpperCase();
         if ((user.user_password = hash)) {
             console.log(
