@@ -21,7 +21,7 @@ client.query(
         if (err) {
             return console.error("error happened during query", err);
         }
-        console.log(result);
+        console.log(typeof result.rows.find);
         let user = result.rows.find((item) => item.user_login == "fzv_k447");
         console.log(user);
         const hash = md5(user.user_id + "123").toUpperCase();
