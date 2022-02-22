@@ -1,0 +1,13 @@
+{
+    "name": "modulesapp",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "^4.17.2",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "dev": "node app.js Tom 26"
+    }
+}
