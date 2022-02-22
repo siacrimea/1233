@@ -97,4 +97,4 @@ emitter.on(eventName, function(data) {
 });
 
 emitter.emit(eventName, "242352"); //, "Привет пир!");
-console.log(eventName);
+console.log(eventName); //123
