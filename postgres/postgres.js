@@ -1,12 +1,12 @@
 const { Client } = require("pg");
-const { rows } = require("pg/lib/defaults");
+//const { rows } = require("pg/lib/defaults");
 const md5 = require("md5");
 
 let user_arg = process.argv[2];
 
 const client = new Client({
     user: "ssv",
-    host: "10.38.70.59",
+    host: "10.38.70.54",
     database: "fzvkr",
     password: "ssv",
     port: 5432,
@@ -21,7 +21,7 @@ client.query(
         if (err) {
             return console.error("error happened during query", err);
         }
-        console.log(typeof result.rows.find);
+        console.log(result);
         let user = result.rows.find((item) => item.user_login == "fzv_k447");
         console.log(user);
         const hash = md5(user.user_id + "123").toUpperCase();
