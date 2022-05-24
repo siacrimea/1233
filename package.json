@@ -1,7 +1,7 @@
 {
-  "name": "node",
+  "name": "mern-couse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mern stack",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +9,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siacrimea/1233.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siacrimea/1233/issues"
+  },
+  "homepage": "https://github.com/siacrimea/1233#readme"
 }
